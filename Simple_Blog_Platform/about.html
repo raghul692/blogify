@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify - About Us</title>
+    <meta name="description" content="Learn more about Blogify and our mission">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .about-hero {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .about-hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .about-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .about-card {
+            text-align: center;
+            padding: var(--spacing-xl);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-card .icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .about-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .mission-section {
+            background: var(--bg-secondary);
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .mission-content h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .mission-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .values-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .value-item {
+            display: flex;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+        }
+        
+        .value-item:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .value-item .value-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .value-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .value-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">📝 Blogify</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <button class="mobile-search-btn" onclick="window.location.href='search.html'">🔍</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-banner">
+            <div class="container">
+                <h1>About Blogify</h1>
+                <p>Learn about our mission and the team behind the blog</p>
+            </div>
+        </div>
+
+        <!-- About Hero -->
+        <section class="section">
+            <div class="container">
+                <div class="about-hero">
+                    <h2>Empowering Developers Through Knowledge 📚</h2>
+                    <p>
+                        Blogify is a community-driven platform dedicated to helping developers 
+                        at all stages of their career. We believe in the power of sharing knowledge 
+                        and creating content that makes a difference. Our articles cover everything 
+                        from HTML basics to advanced React patterns, always with a focus on 
+                        practical, real-world applications.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To provide high-quality, accessible educational content that helps developers build better applications and advance their careers.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">👁️</div>
+                        <h3>Our Vision</h3>
+                        <p>A world where every developer has access to the resources they need to succeed, regardless of their background or experience level.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">💡</div>
+                        <h3>Our Approach</h3>
+                        <p>We focus on practical, hands-on content with real-world examples. No fluff, just actionable knowledge you can apply immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>Why Blogify? 🤔</h2>
+                    <p>
+                        The tech industry evolves at an incredible pace. New frameworks emerge, 
+                        best practices change, and staying up-to-date can be overwhelming. 
+                        Blogify was created to cut through the noise and deliver clear, 
+                        concise, and practical content that actually helps you grow as a developer.
+                    </p>
+                    <p>
+                        Our team of experienced developers and designers curates and creates 
+                        content that matters. We test every code example, review every article 
+                        for accuracy, and ensure that our content follows current best practices.
+                    </p>
+
+                    <div class="values-list">
+                        <div class="value-item">
+                            <span class="value-icon">📖</span>
+                            <div>
+                                <h4>Quality Content</h4>
+                                <p>Every article is carefully researched, written, and reviewed to ensure accuracy and practicality.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🌍</span>
+                            <div>
+                                <h4>Community First</h4>
+                                <p>We build for the community, by the community. Your feedback shapes our content direction.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🚀</span>
+                            <div>
+                                <h4>Stay Current</h4>
+                                <p>We keep up with the latest trends and technologies so you don't have to.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🎓</span>
+                            <div>
+                                <h4>Learn by Doing</h4>
+                                <p>Our tutorials include practical examples and projects you can build along with.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">👥 Meet Our Team</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">The people behind Blogify</p>
+                </div>
+                <div id="authorGrid" class="blog-grid-2" style="grid-template-columns: repeat(3, 1fr);"></div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>📬 Join Our Community</h2>
+                <p>Subscribe to our newsletter and never miss an article. Join thousands of developers learning with Blogify.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-lg">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📝 Blogify</h3>
+                    <p>Your go-to platform for learning web development, design, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html?cat=html">HTML</a></li>
+                        <li><a href="categories.html?cat=css">CSS</a></li>
+                        <li><a href="categories.html?cat=javascript">JavaScript</a></li>
+                        <li><a href="categories.html?cat=react">React</a></li>
+                        <li><a href="categories.html?cat=uiux">UI/UX</a></li>
+                        <li><a href="categories.html?cat=career">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new articles.</p>
+                    <form class="newsletter-form" style="flex-direction: column; gap: var(--spacing-sm);">
+                        <input type="email" placeholder="Your email" required style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Blogify. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        // Render author cards about page
+        document.addEventListener('blogDataLoaded', function() {
+            const authorGrid = document.getElementById('authorGrid');
+            const authors = BlogData.getAuthors();
+            if (authorGrid && authors.length > 0) {
+                BlogRenderer.renderAuthors(authorGrid, authors);
+            }
+        });
+
+        if (!BlogData.isLoadingData()) {
+            document.dispatchEvent(new CustomEvent('blogDataLoaded'));
+        }
+    </script>
+</body>
+</html>

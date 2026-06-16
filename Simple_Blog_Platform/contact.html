@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify - Contact</title>
+    <meta name="description" content="Get in touch with Blogify">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">📝 Blogify</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <button class="mobile-search-btn" onclick="window.location.href='search.html'">🔍</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-banner">
+            <div class="container">
+                <h1>📬 Get in Touch</h1>
+                <p>Have a question or suggestion? We'd love to hear from you!</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl); align-items: start;">
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: var(--spacing-lg);">Let's Talk 💬</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--spacing-xl);">
+                            We're always looking to connect with our readers. Whether you have a question about 
+                            an article, want to suggest a topic, or just want to say hello, we're here for you.
+                        </p>
+
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                                <span style="font-size: 1.5rem;">📧</span>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Email</h4>
+                                    <p style="color: var(--text-secondary);">raghulraja2006gmail.com</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                                <span style="font-size: 1.5rem;">📍</span>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Location</h4>
+                                    <p style="color: var(--text-secondary);">Chennai,Tamilnadu,India</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                                <span style="font-size: 1.5rem;">🐦</span>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Instagram</h4>
+                                    <p style="color: var(--text-secondary);">@dora_emon4123</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: var(--spacing-xl);">
+                            <h3 style="margin-bottom: var(--spacing-md);">Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" title="Facebook">📘</a>
+                                <a href="#" title="Twitter">🐦</a>
+                                <a href="#" title="Instagram">📸</a>
+                                <a href="#" title="LinkedIn">🔗</a>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: var(--spacing-xl); padding: var(--spacing-lg); background: var(--bg-secondary); border-radius: var(--radius-md);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">💡 Quick Response</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                                We typically respond within 24 hours during business days. 
+                                For urgent matters, reach out to us on Twitter.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: var(--spacing-lg);">Send a Message ✉️</h2>
+                        <form id="contactForm" class="contact-form" style="max-width: 100%;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="required">Your Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="John Doe" required minlength="2">
+                                    <span class="error-message">Please enter your name (at least 2 characters)</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="required">Your Email</label>
+                                    <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                                    <span class="error-message">Please enter a valid email address</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="required">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="How can we help?" required minlength="3">
+                                <span class="error-message">Please enter a subject (at least 3 characters)</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="required">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us more about your inquiry..." required minlength="10"></textarea>
+                                <span class="error-message">Please enter a message (at least 10 characters)</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message →</button>
+                        </form>
+                        
+                        <div id="formSuccess" class="success-message">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">✅</div>
+                            <h3 style="margin-bottom: var(--spacing-sm);">Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                            <a href="index.html" class="btn btn-primary mt-2">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">❓ Frequently Asked Questions</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">Quick answers to common questions</p>
+                </div>
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <div style="margin-bottom: var(--spacing-md); padding: var(--spacing-lg); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                        <h4 style="margin-bottom: var(--spacing-sm);">How often do you publish new articles?</h4>
+                        <p style="color: var(--text-secondary);">We publish new articles every week, covering a wide range of topics from HTML basics to advanced React patterns.</p>
+                    </div>
+                    <div style="margin-bottom: var(--spacing-md); padding: var(--spacing-lg); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                        <h4 style="margin-bottom: var(--spacing-sm);">Can I contribute as a writer?</h4>
+                        <p style="color: var(--text-secondary);">Absolutely! We welcome guest posts from the community. Reach out to us through the contact form with your proposal.</p>
+                    </div>
+                    <div style="margin-bottom: var(--spacing-md); padding: var(--spacing-lg); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                        <h4 style="margin-bottom: var(--spacing-sm);">Do you have a newsletter?</h4>
+                        <p style="color: var(--text-secondary);">Yes! Subscribe to our newsletter to get the latest articles delivered straight to your inbox every week.</p>
+                    </div>
+                    <div style="padding: var(--spacing-lg); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                        <h4 style="margin-bottom: var(--spacing-sm);">Can I suggest a topic?</h4>
+                        <p style="color: var(--text-secondary);">Of course! We love hearing from our readers. Use the contact form to suggest topics you'd like us to cover.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📝 Blogify</h3>
+                    <p>Your go-to platform for learning web development, design, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html?cat=html">HTML</a></li>
+                        <li><a href="categories.html?cat=css">CSS</a></li>
+                        <li><a href="categories.html?cat=javascript">JavaScript</a></li>
+                        <li><a href="categories.html?cat=react">React</a></li>
+                        <li><a href="categories.html?cat=uiux">UI/UX</a></li>
+                        <li><a href="categories.html?cat=career">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new articles.</p>
+                    <form class="newsletter-form" style="flex-direction: column; gap: var(--spacing-sm);;">
+                        <input type="email" placeholder="Your email" required style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Blogify. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

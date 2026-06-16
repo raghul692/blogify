@@ -1,0 +1,19 @@
+[
+  { "id": "html", "name": "HTML", "description": "Learn the fundamentals of web structure", "icon": "fab fa-html5", "count": 7 },
+  { "id": "css", "name": "CSS", "description": "Master styling and layouts", "icon": "fab fa-css3-alt", "count": 8 },
+  { "id": "javascript", "name": "JavaScript", "description": "Explore dynamic programming", "icon": "fab fa-js-square", "count": 10 },
+  { "id": "react", "name": "React", "description": "Build modern UIs with React", "icon": "fab fa-react", "count": 6 },
+  { "id": "sql", "name": "SQL", "description": "Database querying and management", "icon": "fas fa-database", "count": 10 },
+  { "id": "python", "name": "Python", "description": "Versatile programming language", "icon": "fab fa-python", "count": 10 },
+  { "id": "java", "name": "Java", "description": "Enterprise-grade programming", "icon": "fab fa-java", "count": 10 },
+  { "id": "nodejs", "name": "Node.js", "description": "Server-side JavaScript runtime", "icon": "fab fa-node-js", "count": 10 },
+  { "id": "mongodb", "name": "MongoDB", "description": "NoSQL document database", "icon": "fas fa-leaf", "count": 10 },
+  { "id": "api", "name": "API", "description": "RESTful and GraphQL APIs", "icon": "fas fa-plug", "count": 10 },
+  { "id": "cybersecurity", "name": "Cybersecurity", "description": "Protect systems and data", "icon": "fas fa-shield-alt", "count": 10 },
+  { "id": "network", "name": "Network & Security", "description": "Computer networking concepts", "icon": "fas fa-network-wired", "count": 10 },
+  { "id": "linux", "name": "Linux", "description": "Open-source OS mastery", "icon": "fab fa-linux", "count": 10 },
+  { "id": "bash", "name": "Bash/Shell", "description": "Command line automation", "icon": "fas fa-terminal", "count": 10 },
+  { "id": "aws", "name": "AWS", "description": "Amazon Web Services cloud", "icon": "fab fa-aws", "count": 10 },
+  { "id": "uiux", "name": "UI/UX", "description": "Design beautiful experiences", "icon": "fas fa-paint-brush", "count": 7 },
+  { "id": "career", "name": "Career", "description": "Professional development", "icon": "fas fa-rocket", "count": 10 }
+]

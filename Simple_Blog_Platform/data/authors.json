@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Praveen",
+    "role": "Senior Frontend Developer",
+    "bio": "John is a passionate frontend developer with over 8 years of experience building modern web applications. He specializes in React, JavaScript, and CSS architecture.",
+    "avatar": "images/authors/author1.jpg",
+    "social": {
+      "twitter": "#",
+      "github": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Raghul Raja",
+    "role": "Full Stack Developer & UI Designer",
+    "bio": "Jane combines her design background with development skills to create beautiful, functional web experiences. She loves teaching others about web development.",
+    "avatar": "images/authors/author2.jpg",
+    "social": {
+      "Instaagram": "https://www.instagram.com/dora_emon4123",
+      "github": "https://github.com/raghul692",
+      "linkedin": "www.linkedin.com/in/raghulraja2006"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Roshan Ebi",
+    "role": "JavaScript Developer & Content Writer",
+    "bio": "Alex is a self-taught developer who loves writing about JavaScript, React, and career development. He believes in learning by building real projects.",
+    "avatar": "images/authors/author3.jpg",
+    "social": {
+      "twitter": "#",
+      "github": "#",
+      "linkedin": "#"
+    }
+  }
+]

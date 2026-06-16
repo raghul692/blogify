@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify - Article</title>
+    <meta name="description" content="Read full article on Blogify">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .blog-post {
+            max-width: var(--container-narrow);
+            margin: 0 auto;
+        }
+        
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        
+        .author-info div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .author-info strong {
+            font-size: 1rem;
+        }
+        
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .post-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .post-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .post-content h2 {
+            font-size: 1.8rem;
+            margin: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        
+        .post-content h3 {
+            font-size: 1.4rem;
+            margin: var(--spacing-lg) 0 var(--spacing-md);
+        }
+        
+        .post-content p {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .post-content ul, .post-content ol {
+            margin: var(--spacing-md) 0;
+            padding-left: var(--spacing-xl);
+        }
+        
+        .post-content ul li {
+            list-style: disc;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .post-content ol li {
+            list-style: decimal;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .post-content pre {
+            margin: var(--spacing-lg) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 1.8rem;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .post-stats {
+                flex-wrap: wrap;
+                gap: var(--spacing-sm);
+            }
+            
+            .post-content {
+                font-size: 1rem;
+            }
+            
+            .post-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .post-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">📝 Blogify</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <button class="mobile-search-btn" onclick="window.location.href='search.html'">🔍</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-banner">
+            <div class="container">
+                <div class="breadcrumbs" style="justify-content: center; color: rgba(255,255,255,0.8);">
+                    <a href="index.html" style="color: rgba(255,255,255,0.8);">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current" style="color: #fff;">Article</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div id="blogContent">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📝 Blogify</h3>
+                    <p>Your go-to platform for learning web development, design, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html?cat=html">HTML</a></li>
+                        <li><a href="categories.html?cat=css">CSS</a></li>
+                        <li><a href="categories.html?cat=javascript">JavaScript</a></li>
+                        <li><a href="categories.html?cat=react">React</a></li>
+                        <li><a href="categories.html?cat=uiux">UI/UX</a></li>
+                        <li><a href="categories.html?cat=career">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new articles.</p>
+                    <form class="newsletter-form" style="flex-direction: column; gap: var(--spacing-sm);">
+                        <input type="email" placeholder="Your email" required style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Blogify. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        // Load blog post based on URL slug
+        function loadBlogPost() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+            
+            if (!slug) {
+                document.getElementById('blogContent').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <h3>No Article Selected</h3>
+                        <p>Please select an article to read.</p>
+                        <a href="index.html" class="btn btn-primary mt-2">Browse Articles</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Check if data is loaded
+            if (BlogData.isLoadingData()) {
+                document.addEventListener('blogDataLoaded', function() {
+                    BlogRenderer.renderBlogPost(slug);
+                });
+            } else {
+                BlogRenderer.renderBlogPost(slug);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadBlogPost);
+        // Also handle if data loads after DOM
+        if (!BlogData.isLoadingData()) {
+            loadBlogPost();
+        }
+    </script>
+</body>
+</html>

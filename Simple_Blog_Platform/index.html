@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify</title>
+    <meta name="description"
+        content="Blogify - A modern blog platform for developers to learn, build, and grow their skills.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                📝 Blogify
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <button class="mobile-search-btn" onclick="window.location.href='search.html'">🔍</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section"
+            style="padding: 8rem 0 var(--spacing-3xl); background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: #fff; text-align: center;">
+            <div class="container">
+                <div class="hero-content" style="max-width: 700px; margin: 0 auto;">
+                    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: var(--spacing-md); line-height: 1.2;">
+                        Learn. Build. Grow.
+                    </h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Discover insightful articles about web development, design,
+                        and career growth. Stay ahead in your tech journey.
+                    </p>
+                    <div class="hero-actions" style="display: flex; gap: var(--spacing-md); justify-content: center;">
+                        <a href="categories.html" class="btn btn-lg"
+                            style="background: #fff; color: var(--primary-color);">Explore Categories</a>
+                        <a href="#latest-posts" class="btn btn-lg btn-outline"
+                            style="border-color: #fff; color: #fff;">Latest Posts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">⭐ Featured Article</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">Hand-picked articles worth
+                        reading</p>
+                </div>
+                <div id="featuredContainer"></div>
+            </div>
+        </section>
+
+        <!-- Latest Posts -->
+        <section class="section" id="latest-posts" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">📝 Latest Posts</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">Stay updated with our newest
+                        content</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-filter"
+                    style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-2xl);">
+                    <button class="filter-btn active" data-category="all"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">All</button>
+                    <button class="filter-btn" data-category="html"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">HTML</button>
+                    <button class="filter-btn" data-category="css"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">CSS</button>
+                    <button class="filter-btn" data-category="javascript"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">JavaScript</button>
+                    <button class="filter-btn" data-category="react"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">React</button>
+                    <button class="filter-btn" data-category="uiux"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">UI/UX</button>
+                    <button class="filter-btn" data-category="career"
+                        style="padding: 0.6rem 1.2rem; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; transition: all var(--transition-fast);">Career</button>
+                </div>
+
+                <div id="blogGrid" class="blog-grid"></div>
+                <div id="pagination"></div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">📂 Browse Categories</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">Explore articles by topic
+                    </p>
+                </div>
+                <div id="categoryGrid" class="blog-grid-2" style="grid-template-columns: repeat(3, 1fr);"></div>
+            </div>
+        </section>
+
+        <!-- Trending Posts -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">🔥 Trending Now</h2>
+                    <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">Most popular articles this
+                        week</p>
+                </div>
+                <div class="trending-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl);">
+                    <div id="trendingContainer"></div>
+                    <div id="sidebarTrending"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>📬 Stay Updated</h2>
+                <p>Get the latest articles delivered straight to your inbox. No spam, ever.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-lg">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📝 Blogify</h3>
+                    <p>Your go-to platform for learning web development, design, and career growth. We provide
+                        high-quality tutorials and articles to help you succeed in tech.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html?cat=html">HTML</a></li>
+                        <li><a href="categories.html?cat=css">CSS</a></li>
+                        <li><a href="categories.html?cat=javascript">JavaScript</a></li>
+                        <li><a href="categories.html?cat=react">React</a></li>
+                        <li><a href="categories.html?cat=uiux">UI/UX</a></li>
+                        <li><a href="categories.html?cat=career">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new articles and updates.</p>
+                    <form class="newsletter-form" style="flex-direction: column; gap: var(--spacing-sm);">
+                        <input type="email" placeholder="Your email" required
+                            style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Blogify. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Homepage initialization
+        document.addEventListener('blogDataLoaded', function (e) {
+            const data = e.detail;
+
+            // Render featured article
+            const featured = BlogData.getFeaturedBlogs();
+            BlogRenderer.renderFeatured(document.getElementById('featuredContainer'), featured.slice(0, 1));
+
+            // Render trending posts
+            const trending = BlogData.getTrendingBlogs();
+            BlogRenderer.renderTrending(document.getElementById('trendingContainer'), trending.slice(0, 4));
+
+            // Render categories
+            const cats = BlogData.getCategories();
+            BlogRenderer.renderCategories(document.getElementById('categoryGrid'), cats);
+
+            // Add active class to filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', function () {
+                    this.style.borderColor = 'var(--primary-color)';
+                    this.style.color = 'var(--primary-color)';
+                });
+                btn.addEventListener('mouseleave', function () {
+                    if (!this.classList.contains('active')) {
+                        this.style.borderColor = 'var(--border-color)';
+                        this.style.color = 'var(--text-primary)';
+                    }
+                });
+            });
+        });
+
+        // Handle loading state if data is already loaded
+        if (!BlogData.isLoadingData()) {
+            const event = new CustomEvent('blogDataLoaded', {
+                detail: {
+                    blogs: BlogData.getBlogs(),
+                    authors: [],
+                    categories: BlogData.getCategories(),
+                    featured: { featured: [5, 6, 9, 14, 19], trending: [3, 5, 6, 9, 11, 13, 14, 19, 20] }
+                }
+            });
+            document.dispatchEvent(event);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify - Search</title>
+    <meta name="description" content="Search articles on Blogify">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">📝 Blogify</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                    <button id="searchButton">🔍</button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <button class="mobile-search-btn" onclick="window.location.href='search.html'">🔍</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-banner">
+            <div class="container">
+                <h1>🔍 Search Articles</h1>
+                <p>Find the articles you're looking for</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <!-- Search Form -->
+                <form id="searchForm" class="search-form" style="margin-bottom: var(--spacing-2xl);">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search by keyword, topic, or title..." style="font-size: 1.1rem; padding: 1rem 1.25rem;" autofocus>
+                    <button type="submit" class="btn btn-primary btn-lg">🔍 Search</button>
+                </form>
+
+                <!-- Results Heading -->
+                <div class="search-results-heading" style="text-align: center; margin-bottom: var(--spacing-xl); display: none;">
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                        Found <strong id="resultCount" style="color: var(--primary-color);">0</strong> results for 
+                        <strong id="searchQuery" style="color: var(--text-primary);"></strong>
+                    </p>
+                </div>
+
+                <!-- Search Results -->
+                <div id="searchResults" class="blog-grid">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <h3>Search for Articles</h3>
+                        <p>Enter a keyword above to search through our articles.</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: var(--spacing-sm);">
+                            Tip: Use Ctrl+K to quickly search from any page
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📝 Blogify</h3>
+                    <p>Your go-to platform for learning web development, design, and career growth.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html?cat=html">HTML</a></li>
+                        <li><a href="categories.html?cat=css">CSS</a></li>
+                        <li><a href="categories.html?cat=javascript">JavaScript</a></li>
+                        <li><a href="categories.html?cat=react">React</a></li>
+                        <li><a href="categories.html?cat=uiux">UI/UX</a></li>
+                        <li><a href="categories.html?cat=career">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new articles.</p>
+                    <form class="newsletter-form" style="flex-direction: column; gap: var(--spacing-sm);">
+                        <input type="email" placeholder="Your email" required style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-primary);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Blogify. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        // Initialize search page with URL query parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                BlogSearch.initSearchPage();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
