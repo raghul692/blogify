@@ -1,5 +1,5 @@
 # 📝 Blogify - Simple Blog Platform
-
+https://blogify-nu-orcin.vercel.app/categories.html
 A modern, responsive blog platform built with pure **HTML**, **CSS**, and **JavaScript** - no frameworks or backend required.
 
 ## 🚀 Features
